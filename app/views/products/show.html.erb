@@ -1,0 +1,17 @@
+<% provide(:title, @product.name) %>
+<div class="row">
+    <aside class="col-md-4">
+        <section class="user_info">
+            <h1>
+                <%= gravatar_for @product %>
+                <%= @product.name %>
+            </h1>
+            <h2>
+                <%= @product.description %>
+            </h2>
+            <h3>
+                <%= @product.price %>
+            </h3>
+        </section>
+    </aside>
+</div>

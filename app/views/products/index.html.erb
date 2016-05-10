@@ -1,0 +1,11 @@
+<% provide(:title, 'All products') %>
+<h1>All products</h1>
+
+<ul class="products">
+    <% @products.each do |product| %>
+        <li>
+            <%= gravatar_for product, size: 50 %>
+            <%= link_to product.name, product %>
+        </li>
+    <% end %>
+</ul>
