@@ -8,7 +8,7 @@ gem 'bootstrap-sass', '3.3.6'
 # Use faker to populate database
 gem 'faker', '1.6.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use taps
 gem 'taps'
 # Use SCSS for stylesheets
