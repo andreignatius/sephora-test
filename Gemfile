@@ -11,6 +11,9 @@ gem 'faker', '1.6.2'
 #gem 'sqlite3'
 # Use taps
 gem 'taps'
+# Use pg
+gem 'pg'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -50,6 +53,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
+#  gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
 end
