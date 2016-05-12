@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   get 'users/new'
 
   get 'products/new'
@@ -10,6 +12,9 @@ Rails.application.routes.draw do
   get 'edit'      => 'products#edit'
   get 'addproduct'=> 'products#new'
   get 'signup'    => 'users#new'
+  get 'login'     => 'sessions#new'
+  post 'login'    => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   resources :products
   resources :users
 
