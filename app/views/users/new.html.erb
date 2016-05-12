@@ -9,7 +9,14 @@
 
       <%= f.label :email %>
       <%= f.email_field :email %>
-
+      
+      <%= f.label :admin %>
+      <%= f.input :isType, 
+            :as => :select, 
+            :collection => [['Type1',false],['Type2',true]], 
+            :include_blank => false, 
+            :label => "Type" %>
+            
       <%= f.label :password %>
       <%= f.password_field :password %>
 
