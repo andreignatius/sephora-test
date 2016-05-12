@@ -24,7 +24,8 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
-      #handle successful update
+      flash[:success] = "Product profile updated"
+      redirect_to @product
     else
       render 'edit'
     end
