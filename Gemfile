@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
+# Use bcrypt to hash the passwords
+gem 'bcrypt', '3.1.7'
 # Bootstrap
 gem 'bootstrap-sass', '3.3.6'
 # Use faker to populate database
