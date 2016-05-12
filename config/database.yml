@@ -29,6 +29,7 @@ default: &default
   username:
   password:
   timeout: 5000
+  encoding: sql_ascii
   port: 5432
 development:
   <<: *default

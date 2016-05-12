@@ -21,6 +21,15 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
   
+  def update
+    @product = Product.find(params[:id])
+    if @product.update_attributes(product_params)
+      #handle successful update
+    else
+      render 'edit'
+    end
+  end
+  
   def index
     @products = Product.all
   end
