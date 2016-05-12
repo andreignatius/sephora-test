@@ -1,6 +1,8 @@
 <% provide(:title, 'All products') %>
 <h1>All products</h1>
 
+<%= will_paginate %>
+
 <ul class="products">
     <% @products.each do |product| %>
         <li>
@@ -9,3 +11,5 @@
         </li>
     <% end %>
 </ul>
+
+<%= will_paginate %>

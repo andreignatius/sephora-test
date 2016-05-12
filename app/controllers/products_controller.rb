@@ -32,7 +32,7 @@ class ProductsController < ApplicationController
   end
   
   def index
-    @products = Product.all
+    @products = Product.pagination(page: params[:page])
   end
   
   private
