@@ -45,13 +45,12 @@ class ProductsController < ApplicationController
     @products = Product.paginate(page: params[:page])
   end
   
-  def admin_user
-    redirect_to(root_url) unless current_user.admin?
-  end
-  
   private
     def product_params
       params.require(:product).permit(:name, :description, :price)
     end
     
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
 end

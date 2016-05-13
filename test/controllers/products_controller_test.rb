@@ -4,6 +4,7 @@ class ProductsControllerTest < ActionController::TestCase
   def setup
     @user       = users(:michael)
     @other_user = users(:archer)
+    @product    = products(:one)
   end
   
   test "should get new" do
