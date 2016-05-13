@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  
+  before_action :admin_user, only: :destroy
+  
   def show
     @product = Product.find(params[:id])
   end
@@ -31,8 +34,18 @@ class ProductsController < ApplicationController
     end
   end
   
+  def destroy
+    Product.find(params[:id]).destroy
+    flash[:success] = "Product deleted"
+    redirect_to users_url
+  end
+  
   def index
     @products = Product.paginate(page: params[:page])
+  end
+  
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
   
   private

@@ -6,7 +6,7 @@
 <ul class="products">
     <% @products.each do |product| %>
         <li>
-            <%= gravatar_for product, size: 50 %>
+            <%= gravatar_for_product product, size: 50 %>
             <%= link_to product.name, product %>
         </li>
     <% end %>
