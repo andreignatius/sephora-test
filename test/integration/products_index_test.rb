@@ -7,6 +7,16 @@ class ProductsIndexTest < ActionDispatch::IntegrationTest
     @non_admin = users(:archer)
   end
 
+  test "index including pagination" do
+    log_in_as(@admin)
+    get products_path
+    assert_template 'products/index'
+    assert_select 'div.pagination'
+    Product.paginate(page: 1).each do |product|
+      assert_select 'a[href=?]', product_path(product), text: product.name
+    end
+  end
+  
   test "index as admin including pagination and delete links" do
     log_in_as(@admin)
     get products_path
