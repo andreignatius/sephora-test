@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
   
   def edit
     @product = Product.find(params[:id])
+    puts @product
   end
   
   def update
