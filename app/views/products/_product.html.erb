@@ -2,7 +2,7 @@
   <%= gravatar_for_product product, size: 50 %>
   <%= link_to product.name, product %>
   <% if current_user.present? && current_user.admin? %>
-    | <%= link_to "edit", product, edit_path %>
+    | <%= link_to "edit", edit_path(@product) %>
     | <%= link_to "delete", product, method: :delete,
                                   data: { confirm: "You sure?" } %>
   <% end %>
