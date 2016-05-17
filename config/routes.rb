@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'help'      => 'static_pages#help'
   get 'about'     => 'static_pages#about'
   get 'contact'   => 'static_pages#contact'
-  get 'edit'      => 'products/#{@product.id}/edit'
+  get 'edit'      => 'products/#{@product.id}/products#edit'
   get 'addproduct'=> 'products#new'
   get 'signup'    => 'users#new'
   get 'login'     => 'sessions#new'
