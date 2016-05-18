@@ -24,6 +24,18 @@ body {
     padding-top: 60px;
 }
 
+div::after {
+  content: "";
+  background: url(Sephora-Melbourne-Store.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 section {
     overflow: auto;
 }

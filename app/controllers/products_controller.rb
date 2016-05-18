@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  
   def show
     @product = Product.find(params[:id])
   end
@@ -40,6 +39,7 @@ class ProductsController < ApplicationController
   end
   
   def index
+   #  @products = ProductsLoader.new('makeup').products
     @products = Product.paginate(page: params[:page])
   end
   
